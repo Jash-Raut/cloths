@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(orange, #ffffff);
+        position: sticky;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .header ul {
+        display: flex;
+    }
+
+    .header ul li {
+        list-style: none;
+        padding: 20px;
+    }
+
+    .header ul li a {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+    }
+
+    .header ul li a:hover {
+        background-color: #ffffff;
+        color: rgb(0, 170, 255);
+        transition: 2s;
+    }
+
+    .btn button {
+        margin: 30px;
+        width: 100px;
+        height: 30px;
+        border: 2px solid black;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+
+    .btn button a {
+        text-decoration: none;
+        font-weight: bold;
+        height: 100%;
+        width: 100%;
+    }
+
+    .btn button:hover {
+        background-color: blue;
+        color: #ffffff;
+        transition: 2s;
+        cursor: pointer;
+    }
+
+    .btn button:hover a {
+        color: #ffffff;
+        transition: 2s;
+    }
+
+
+
+    .absolute {
+        position: absolute;
+        border: 2px solid black;
+        z-index: -1;
+    }
+
+    .relative {
+        position: relative;
+        top: 5px;
+        border: 2px solid black;
+        margin: 0px 10px;
+        background-color: black;
+        color: #ffffff;
+        z-index: -1;
+    }
+
+    .relative2 {
+        position: relative;
+        border: 2px solid red;
+        top: 0px;
+        background-color: red;
+        z-index: -1;
+    }
+
+    .container {
+        width: 100%;
+        height: 1200px;
+        background-color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .box {
+        width: 25%;
+        height: 580px;
+        background-color: #ffffff;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .box:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+        transition: 2s;
+        background: rgb(97, 160, 255);
+    }
+
+    .box .img1 {
+        width: 300px;
+        padding-left: 35px;
+        padding-top: 5px;
+        object-fit: cover;
+    }
+
+    .box p {
+        padding-top: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .box .img2 {
+        width: 250px;
+        margin-left: 55px;
+        margin-top: -10px;
+    }
+
+    .box .img3 {
+        width: 250px;
+        margin-left: 55px;
+        margin-top: 10px;
+
+    }
+
+    .box .img4 {
+        width: 320px;
+        height: 320px;
+        margin-left: 25px;
+        margin-top: 10px;
+
+    }
+
+    .box .img5 {
+        width: 320px;
+        height: 320px;
+        margin-left: 25px;
+        margin-top: 10px;
+
+    }
+
+    .box .img6 {
+        width: 320px;
+        height: 320px;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+
+    .box button {
+        width: 300px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    .box button:hover {
+        background-color: rgb(255, 255, 255);
+        color: #0000ff;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .buy button{
+        width: 300px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    .buy button:hover {
+        background-color: white;
+        color: #ff0000;
+        transition: 1s;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Services</a></li>
+        </ul>
+        <div class="btn">
+            <button><a href="login.html">Login</a></button>
+            <button><a href="sign.html">Sign Up</a></button>
+        </div>
+    </div>
+    <marquee behavior="scroll" direction="left"
+        style="background: linear-gradient(orange, white, green); color: #0000ff; font-weight: bold; padding: 10px;"
+        scrollamount="10">
+        Welcome to our website! Enjoy shopping the latest shirts at amazing prices!
+    </marquee>
+
+    <br>
+    <!-- <div class="content">
+        <h1>This is Heading</h1>
+        <div class="absolute">
+            <p>
+                <br>
+                <br>
+                <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo numquam consequatur quis error quos.
+                Ullam distinctio natus molestias nobis doloremque. Eius magnam debitis nemo ea molestiae laboriosam
+                reiciendis! Veritatis, distinctio vel dicta officia dolorem totam obcaecati hic quas aliquid. Libero sed
+                odio ea. Voluptatum quod necessitatibus iusto accusantium totam porro?
+            </p>
+        </div>
+
+        <div class="relative">
+            <p>This is a relative div.
+            </p>
+        </div>
+
+        <div class="relative2">
+            <p>
+                <br>
+                This is another relative div.
+            </p>
+        </div>
+    </div> -->
+    <br>
+    <br>
+    <div class="container">
+        <div class="box"><img src="Shirt1.png" alt="" class="img1">
+            <p>Shirt 1</p>
+            <p>Price: $50</p>
+            <br>
+            <p><a href=""><button> Add To Cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+            <p class="buy"><a href="buy.html"><button> Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>            
+        </div>
+        <div class="box">
+            <img src="Shirt2.png" alt="" class="img2">
+            <p>Shirt 2</p>
+            <p>Price: $75</p>
+            <p><a href=""><button> Add To Cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+            <p class="buy"><a href="buy.html"><button> Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>            
+        </div>
+        <div class="box"><img src="Shirt3.png" alt="" class="img3">
+            <p>Shirt 3</p>
+            <p>Price: $90</p>
+            <p><a href=""><button> Add To Cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16" width="10px"
+                            height="10px">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+            <p class="buy"><a href="buy.html"><button> Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>            
+        </div>
+        <div class="box"><img src="Shirt4.png" alt="" class="img4">
+            <p>Shirt 4</p>
+            <p>Price: $60</p>
+            <p><a href=""><button> Add To Cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+            <p class="buy"><a href="buy.html"><button> Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>            
+        </div>
+        <div class="box"><img src="Shirt5.png" alt="" class="img5">
+            <p>Shirt 5</p>
+            <p>Price: $80</p>
+            <p><a href=""><button> Add To Cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+            <p class="buy"><a href="buy.html"><button> Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>            
+        </div>
+        <div class="box"><img src="Shirt6.png" alt="" class="img6">
+            <p>Shirt 6</p>
+            <p>Price: $100</p>
+            <p><a href=""><button> Add To Cart <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+            <p class="buy"><a href="buy.html"><button> Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708" />
+                        </svg></button></a></p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
